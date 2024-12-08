@@ -1,0 +1,146 @@
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* custom classes */
+.d-none {
+  display: none;
+}
+/*  */
+.main-layout {
+  display: flex;
+  width: 100%;
+  /* height: calc(100vh - 18px); */
+}
+.layout-content {
+  flex-grow: 1;
+}
+.routes-div {
+  display: flex;
+  align-items: center;
+}
+.sidebar-item {
+  border-right: 1px solid #e6eff5;
+  width: 250px;
+  padding: 31px 38px;
+}
+.logo-dashboard img {
+  object-fit: contain;
+}
+.link-items {
+  margin-top: 32px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.link-items li span {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.link-items li {
+  display: flex;
+  align-items: center;
+  color: #b1b1b1;
+  font-size: 18px;
+  padding-block: 14px;
+  padding-left: 20px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-left: 6px solid #fff;
+}
+.link-items li.active {
+  color: #2d60ff;
+  border-color: #2d60ff !important;
+}
+/* header */
+.dashboard-header {
+  padding: 20px 40px;
+}
+.items-header {
+  display: flex;
+  justify-content: space-between;
+}
+.items-header h2 {
+  font-size: 28px;
+  color: #343c6a;
+  font-weight: 600;
+}
+/* main-content */
+.main-content {
+  padding: 20px 40px;
+  background-color: #f5f5f5;
+  height: 100%;
+}
