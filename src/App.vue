@@ -1,5 +1,5 @@
 <script setup>
-import Sidebar from "./components/layout/sidebar.vue"
+import Sidebar from "./components/layout/sid.vue"
 import MainHeader from "./components/layout/HeaderMain.vue"
 import Svgs from "./components/svgs.vue"
 </script>
