@@ -1,69 +1,75 @@
+<script setup>
+import { ref } from 'vue';
+import { useCommonStore } from '../../stores/common';
+const commonStore = useCommonStore();
+
+const routesLinks = ref([
+    {
+        imgsrc:'/src/assets/sidebar-icons/dashboard.svg',
+        linkName:'Dashboard',
+        linkUrl:'/'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/transaction.svg',
+        linkName:'Transactions',
+        linkUrl:'/transaction'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/account.svg',
+        linkName:'Accounts',
+        linkUrl:'/account'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/investment.svg',
+        linkName:'Investments',
+        linkUrl:'/investments'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/credit-card.svg',
+        linkName:'Credit Cards',
+        linkUrl:'/creditcard'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/loan.svg',
+        linkName:'Loan',
+        linkUrl:'/loan'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/services.svg',
+        linkName:'Services',
+        linkUrl:'/services'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/privileges.svg',
+        linkName:'My Privileges',
+        linkUrl:'/myprivileges'
+    },
+    {
+        imgsrc:'/src/assets/sidebar-icons/settings.svg',
+        linkName:'Setting',
+        linkUrl:'/setting'
+    }
+])
+
+</script>
 <template>
-    <div class="sidebar-item">
+    <div :class="commonStore.sidebar ? 'sidebar-item visible' : 'sidebar-item hidden'">
         <div class="logo-dashboard">
             <img src="/src/assets/dashboard-logo.png" width="183" height="36" alt="icon">
         </div>
         <ul class="link-items">
-            <li class="active">
-            <img src="/src/assets/sidebar-icons/dashboard.svg" height="25" width="25" alt="icon">
-            <span>
-                Dashboard
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/transaction.svg" height="25" width="25" alt="icon">
-            <span>
-                Transactions
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/account.svg" height="25" width="25" alt="icon">
-            <span>
-                Accounts
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/investment.svg" height="25" width="25" alt="icon">
-            <span>
-                Investments
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/credit-card.svg" height="25" width="25" alt="icon">
-            <span>
-                Credit Cards
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/loan.svg" height="25" width="25" alt="icon">
-            <span>
-                Loans
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/services.svg" height="25" width="25" alt="icon">
-            <span>
-                Services
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/privileges.svg" height="25" width="25" alt="icon">
-            <span>
-                My Privileges
-            </span>
-            </li>
-            <li>
-            <img src="/src/assets/sidebar-icons/settings.svg" height="25" width="25" alt="icon">
-            <span>
-                Setting
-            </span>
-            </li>
+            <router-link :to="link.linkUrl" v-for="link in routesLinks" :key="link.linkName">
+                <li>
+                    <img :src="link.imgsrc" height="25" width="25" loading="lazy" alt="icon">
+                    <span>
+                      {{ link.linkName }}
+                    </span>
+                </li>
+            </router-link>
         </ul>
     </div>
 </template>
 
-<script>
-</script>
 
 <style>
 
