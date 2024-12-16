@@ -1,5 +1,5 @@
 <template>
-  dasboard Home
+  loan
 </template>
 
 <script>

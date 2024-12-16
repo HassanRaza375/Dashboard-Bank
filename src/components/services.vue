@@ -1,5 +1,5 @@
 <template>
-  dasboard Home
+  services
 </template>
 
 <script>
