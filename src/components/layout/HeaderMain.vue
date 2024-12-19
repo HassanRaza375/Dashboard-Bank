@@ -15,10 +15,7 @@ const toggleSidebar = () => {
             <div>
                 <!-- <input type="text"> -->
             <div>
-            <p>Count: {{ counterStore.count }}</p>
-            <p>Double Count: {{ counterStore.doubleCount }}</p>
-            <button @click="counterStore.increment">Increment</button>
-            <button @click="counterStore.decrement">Decrement</button>
+
             </div>
             </div>
         </div>
