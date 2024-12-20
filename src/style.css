@@ -86,6 +86,9 @@ select {
 .justify-start {
   justify-content: start;
 }
+.justify-end {
+  justify-content: end;
+}
 .align-center {
   align-items: center;
 }
@@ -295,6 +298,30 @@ select {
 .inv-text-sub {
   font-size: 15px;
   color: #718ebf;
+}
+.close {
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  right:46px;
+  content: " ";
+  height: 25px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 992px) {
