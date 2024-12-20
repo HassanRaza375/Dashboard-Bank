@@ -10,7 +10,6 @@ import Loan from "../components/Loan.vue";
 import Services from "../components/Services.vue";
 import Myprivileges from "../components/Myprivileges.vue";
 import Setting from "../components/Setting.vue";
-import Page1 from "../pages/page1.vue";
 
 const routes = [
   { path: "/", component: HomeView },
@@ -23,7 +22,6 @@ const routes = [
   { path: "/services", component: Services },
   { path: "/myprivileges", component: Myprivileges },
   { path: "/Setting", component: Setting },
-  { path: "/Page1", component: Page1 },
 ];
 
 const router = createRouter({

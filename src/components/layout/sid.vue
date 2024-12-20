@@ -7,11 +7,6 @@ const routesLinks = ref([
     {
         imgsrc:'/src/assets/sidebar-icons/dashboard.svg',
         linkName:'Dashboard',
-        linkUrl:'/Page1'
-    },
-    {
-        imgsrc:'/src/assets/sidebar-icons/dashboard.svg',
-        linkName:'Dashboard',
         linkUrl:'/'
     },
     {

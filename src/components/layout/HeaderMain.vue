@@ -14,9 +14,7 @@ const toggleSidebar = () => {
             </div>
             <div>
                 <!-- <input type="text"> -->
-            <div>
 
-            </div>
             </div>
         </div>
     </div>
